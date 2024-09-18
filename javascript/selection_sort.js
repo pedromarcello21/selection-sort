@@ -1,5 +1,17 @@
 function selectionSort(arr) {
   // type your code here
+  sorted_arr = [];
+  while(arr.length != 0){
+    //get min
+    min = Math.min.apply(Math, arr)
+    //extract min
+    let index = arr.indexOf(min)
+    //remove min from list, gives me back an array so index the first value so you don't get an array or rays
+    let x = arr.splice(index, 1)[0]
+    //push this value to a new array
+    sorted_arr.push(x)
+  }
+  return sorted_arr
 }
 
 if (require.main === module) {
